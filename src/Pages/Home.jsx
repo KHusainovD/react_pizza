@@ -50,7 +50,7 @@ function Home() {
             <div className="content__items">
                 {
                     isLoaded
-                        ? items.map(item => <PizzaBlock onClickAddPizza={onClickAddPizzaToCart} addedCount={cartItems[item.id] && cartItems[item.id].length} isLoading={true} key={item.id} {...item}/>)
+                        ? items.map(item => <PizzaBlock onClickAddPizza={onClickAddPizzaToCart} addedCount={cartItems[item.id] && cartItems[item.id].items.length} isLoading={true} key={item.id} {...item}/>)
                         : Array(12).fill(0).map((_, index) => <PizzaLoadingBlock key={index}/>)
                 }
             </div>
